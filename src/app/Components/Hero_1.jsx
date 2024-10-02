@@ -7,7 +7,7 @@ function Hero_1() {
     <div className="bg-orange-400 h-auto w-auto">
       <nav className="flex items-center p-3">
         <img src="logo_sf.svg" alt="Logo" className=" px-[2%]" />
-        <ul className="flex space-x-[12%] mr-[12%] space-x-7 list-none text-white ml-auto text-[140%]">
+        <ul className="flex mr-[12%] space-x-7 list-none text-white ml-auto text-[140%]">
           <li className="hover:bg-green-300 rounded">Home</li>
           <li className="hover:bg-green-300 rounded">Shop</li>
           <li className="hover:bg-green-300 rounded">Features</li>
