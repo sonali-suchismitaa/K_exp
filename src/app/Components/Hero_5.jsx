@@ -6,7 +6,7 @@ function Hero5() {
     const feedbacks = [
         {
             name: "Swagat Patel",
-            message: "Great Service. Looking forward to shop more with Sneakers Factory."
+            message: "Great Service. Loved the product. Looking forward to shop more with Sneakers Factory."
         },
         {
             name: "Swoyamjeet Sahu",
