@@ -11,8 +11,8 @@ export default function Home() {
             </Head>
             <div className="text-center max-w-4xl mx-auto p-8">
                 {/* Heading */}
-                <h1 className="text-4xl font-bold mb-4">Best Selling</h1>
-                <p className="text-lg mb-8">Join The Trend With Our Curated Selection Of Best Selling Sneakers</p>
+                <h1 className="text-4xl font-bold mb-4 text-black">Best Selling</h1>
+                <p className="text-lg mb-8 text-black">Join The Trend With Our Curated Selection Of Best Selling Sneakers</p>
                 
                 {/* Product Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
