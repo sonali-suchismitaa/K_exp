@@ -1,6 +1,12 @@
 // pages/index.js
+<<<<<<< HEAD
 
 import Image from "next/image";
+=======
+"use client";
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> d0f0e85f5186573c20b9fd890fd50d3558d2ab7c
 
 export default function Home() {
   return (
