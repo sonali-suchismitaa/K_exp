@@ -8,7 +8,7 @@ export default function Home() {
       {/* Container */}
       <div className="max-w-screen-lg mx-auto p-8">
         {/* Title */}
-        <h1 className="text-4xl font-bold text-center text-brown-600 mb-8">
+        <h1 className="text-4xl font-bold text-center text-black mb-8">
           The Drip Sale!
         </h1>
 
