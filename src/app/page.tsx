@@ -14,6 +14,8 @@ export default function Home() {
         <Hero2 />
         <Hero3 />
         <Hero_5 />
+        <men />
+        <women />
         <Footer />
 
       </div>
