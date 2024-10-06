@@ -5,8 +5,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-orange-400 min-h-screen w-full">
-      {/* Navbar */}
+   <div>
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sneakers Factory</title>
+        <script src="https://cdn.tailwindcss.com" />
+      </head>
+      <body className="bg-orange-100">
+        {/* Navbar */}
       <nav className="flex items-center p-3 flex-wrap">
         <img
           src="/logo_sf.svg"
