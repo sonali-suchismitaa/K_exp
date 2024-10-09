@@ -28,7 +28,7 @@ const Women = () => {
   {/* Main Content */}
   <div className="container mx-auto py-12">
     {/* Section Title */}
-    <h2 className="text-center text-3xl font-bold mb-8 text-[#9D5A20]">Men</h2>
+    <h2 className="text-center text-3xl font-bold mb-8 text-[#9D5A20]">Women</h2>
 
     {/* Filter and Sort */}
     <div className="flex justify-end mb-4 space-x-4">
