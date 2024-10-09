@@ -1,89 +1,67 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Hero5() {
-    // Feedback data
     const feedbacks = [
-        {
-            name: "Swagat Patel",
-            message: "Great Service. Loved the product. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Swoyamjeet Sahu",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Sonali Suchismita",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Brajamohan Das",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Priyanshu Kumar Patra",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Piyush Kumar Mishra",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Piyush Kumar Jena",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Pawani Yadav",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Prateek Parija",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        },
-        {
-            name: "Debi Prasanna Dash",
-            message: "Great Service. Loved the product. The customer experience was top-notch. Looking forward to shop more with Sneakers Factory."
-        }
+        { name: "Swagat Patel", message: "Great Service. Loved the product..." },
+        { name: "Swoyamjeet Sahu", message: "Great Service. Loved the product..." },
+        { name: "Sonali Suchismita", message: "Great Service. Loved the product..." },
+        { name: "Brajamohan Das", message: "Great Service. Loved the product..." },
+        { name: "Priyanshu Kumar Patra", message: "Great Service. Loved the product..." },
+        { name: "Piyush Kumar Mishra", message: "Great Service. Loved the product..." },
+        { name: "Piyush Kumar Jena", message: "Great Service. Loved the product..." },
+        { name: "Pawani Yadav", message: "Great Service. Loved the product..." },
+        { name: "Prateek Parija", message: "Great Service. Loved the product..." },
+        { name: "Debi Prasanna Dash", message: "Great Service. Loved the product..." }
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Handle left button click
     const handleLeftClick = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex((prevIndex) => prevIndex - 1);
-        }
+        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : feedbacks.length - 1));
     };
 
     // Handle right button click
     const handleRightClick = () => {
-        if (currentIndex < feedbacks.length - 3) {
-            setCurrentIndex((prevIndex) => prevIndex + 1);
-        }
+        setCurrentIndex((prevIndex) => (prevIndex < feedbacks.length - 1 ? prevIndex + 1 : 0));
     };
+
+    // Auto-rotate functionality
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex < feedbacks.length - 1 ? prevIndex + 1 : 0));
+        }, 3000); // Change slides every 3 seconds
+
+        // Cleanup on unmount
+        return () => {
+            clearInterval(interval);
+        };
+    }, [feedbacks.length]);
 
     return (
         <div className="bg-[#FFA14F] h-auto w-auto pt-16">
-            {/* Title */}
-            <h2 className="text-[60px] font-bold text-center text-white mb-16 font-spartan">
+            <h2 className="text-4xl md:text-[60px] font-bold text-center text-white mb-8 md:mb-16 font-spartan">
                 Feedback Corner.
             </h2>
 
             {/* Feedback Cards Container */}
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden max-w-full mx-auto px-4">
                 <div 
                     className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
-                    {/* Render Feedback Cards */}
                     {feedbacks.map((feedback, index) => (
-                        <div key={index} className="flex-none w-1/3 px-8">
-                            <div className="bg-orange-200 bg-opacity-50 p-8">
+                        <div 
+                            key={index} 
+                            className="flex-none w-full sm:w-1/2 lg:w-1/3 px-4 sm:px-8"
+                        >
+                            <div className="bg-orange-200 bg-opacity-50 p-8 rounded-lg">
                                 <div className="items-baseline">
-                                    <p className="text-6xl text-white leading-none">&ldquo;</p>
-                                    <h1 className="text-4xl font-bold text-white">{feedback.name}</h1>
+                                    <p className="text-4xl md:text-6xl text-white leading-none">&ldquo;</p>
+                                    <h1 className="text-2xl md:text-4xl font-bold text-white">{feedback.name}</h1>
                                 </div>
-                                <p className="text-white text-[18px] font-inter leading-tight mt-4">
+                                <p className="text-white text-[16px] md:text-[18px] font-inter leading-tight mt-4">
                                     {feedback.message}
                                 </p>
                             </div>
@@ -93,18 +71,16 @@ function Hero5() {
             </div>
 
             {/* Navigation Controls */}
-            <div className="flex justify-center mt-16 pb-8">
+            <div className="flex justify-center mt-8 md:mt-16 pb-8">
                 <button
                     className={`items-center text-lg w-10 h-10 mx-2 rounded-full ${currentIndex === 0 ? "opacity-50" : "hover:bg-orange-500 transition duration-300"}`}
                     onClick={handleLeftClick}
-                    disabled={currentIndex === 0}
                 >
                     <span className="text-xl">&#9664;</span>
                 </button>
                 <button
-                    className={`items-center text-lg w-10 h-10 mx-2 rounded-full ${currentIndex === feedbacks.length - 3 ? "opacity-50" : "hover:bg-orange-500 transition duration-300"}`}
+                    className={`items-center text-lg w-10 h-10 mx-2 rounded-full ${currentIndex === feedbacks.length - 1 ? "opacity-50" : "hover:bg-orange-500 transition duration-300"}`}
                     onClick={handleRightClick}
-                    disabled={currentIndex === feedbacks.length - 3}
                 >
                     <span className="text-xl">&#9654;</span>
                 </button>
