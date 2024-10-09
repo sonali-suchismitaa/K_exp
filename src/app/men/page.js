@@ -1,8 +1,9 @@
-// pages/men/index.js
+// pages/women/index.js
 import React from 'react';
 
-const Men = () => {
-  return (<div className="bg-orange-400 min-h-screen w-full">
+const Women = () => {
+  return (
+    <div className="bg-orange-400 min-h-screen w-full">
   {/* Navbar */}
   <nav className="flex items-center p-3 flex-wrap">
     <img
@@ -68,7 +69,8 @@ const Men = () => {
     </div>
   </div>
 </div>
+    
   );
 };
 
-export default Men;
+export default Women;
