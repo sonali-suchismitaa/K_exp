@@ -7,7 +7,7 @@ function Hero_1() {
       {/* Navbar */}
       <nav className="flex items-center p-3 flex-wrap">
         <img
-          src="/logo_sf.svg"
+          src="/logo.svg"
           alt="Logo"
           width={200}
           height={600}

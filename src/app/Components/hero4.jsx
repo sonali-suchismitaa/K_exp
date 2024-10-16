@@ -13,7 +13,7 @@ const ShoeStore = () => {
 
   const navigateToWomen = () => {
     router.push('/women'); // Navigate to /women page
-  };
+  }; 
 
   return (
     <div className=" bg-orange-300">
