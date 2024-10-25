@@ -18,7 +18,7 @@ const page = () => {
     />
     <ul className="flex flex-wrap space-x-6 lg:space-x-28 list-none text-white ml-auto text-base md:text-lg lg:text-xl px-6">
       <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Home</li>
-      <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Men</li>
+      <li className=" bg-white text-black rounded px-3 py-1 cursor-pointer">Men</li>
       <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Women</li>
       <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Contact</li>
       <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Cart</li>
