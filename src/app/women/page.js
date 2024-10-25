@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Footer from '../Components/Footer';
 
@@ -15,8 +16,8 @@ const page = () => {
     />
     <ul className="flex flex-wrap space-x-6 lg:space-x-28 list-none text-white ml-auto text-base md:text-lg lg:text-xl px-6">
       <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Home</li>
-      <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Shop</li>
-      <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Features</li>
+      <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Men</li>
+      <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Women</li>
       <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Contact</li>
       <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Cart</li>
       <button className="border border-white rounded hover:bg-green-300 px-4 py-2">

@@ -40,7 +40,7 @@ export default function Page() {
         <img src="logo.svg" className="position" alt="Logo" />
       </div>
       <main>
-        <div className="text-center mb-4">
+        <div className="text-center mb-4 text-white">
           <h1 className="text-4xl">Log In</h1>
         </div>
         <div className="flex flex-col mb-4">
@@ -48,7 +48,9 @@ export default function Page() {
             Username
             <input className="border rounded p-2" />
           </label>
+
           <br />
+          
           <label>
             Password
             <input type="password" className="border rounded p-2" />
