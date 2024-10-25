@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Hero5() {
     const feedbacks = [
-        { name: "Swagat Patel", message: "Great Service. Loved the product. Looking forward to shop more with Sneakers Factory." },
+        { name: "Swagat Patel", message: "Great Service. Loved the product. Looking forward to shop more with Urban Steps." },
         { name: "Swoyamjeet Sahu", message: "Great Service. Loved the product. The customer experience was top-notch." },
         { name: "Sonali Suchismita", message: "Great Service. The customer experience was top-notch." },
-        { name: "Brajamohan Das", message: "Looking forward to shop more with Sneakers Factory." },
+        { name: "Brajamohan Das", message: "Looking forward to shop more with Urban Steps." },
         { name: "Priyanshu Kumar Patra", message: "Great Service. The customer experience was top-notch." },
         { name: "Piyush Mishra", message: "The customer experience was top-notch." },
         { name: "Piyush Kumar Jena", message: "Loved the product. Looking forward to shop more." },

@@ -1,25 +1,35 @@
 "use client";
 import React from 'react';
+import { useRouter } from 'next/navigation'
 
 function Hero_1() {
+
+  const router = useRouter();
+  const navigateToMen = () =>{
+    router.push('/men')
+  };
+  const navigateToWomen = () =>{
+    router.push('/women')
+  };
+  const navigateToContacts = () =>{
+    router.push('/contacts')
+  };
+  const navigateToLogin = () =>{
+    router.push('/login')
+  };
+
   return (
     <div className="bg-orange-400 min-h-screen w-full">
       {/* Navbar */}
       <nav className="flex items-center p-3 flex-wrap">
-        <img
-          src="/logo.svg"
-          alt="Logo"
-          width={200}
-          height={600}
-          className="px-4"
-        />
+        <img src="/logo.svg" alt="Logo" width={200} height={600} className="px-4" />
         <ul className="flex flex-wrap space-x-6 lg:space-x-28 list-none text-white ml-auto text-base md:text-lg lg:text-xl px-6">
           <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Home</li>
-          <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Shop</li>
-          <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Features</li>
-          <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Contact</li>
+          <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer" onClick={navigateToMen}>Mens</li>
+          <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer" onClick={navigateToWomen}>Women</li>
+          <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer" onClick={navigateToContacts}>Contact</li> {/* Fixed the handler name */}
           <li className="hover:bg-white hover:text-black rounded px-3 py-1 cursor-pointer">Cart</li>
-          <button className="border border-white rounded hover:bg-green-300 px-4 py-2">
+          <button className="border border-white rounded hover:bg-green-300 px-4 py-2" onClick={navigateToLogin}>
             Login
           </button>
         </ul>

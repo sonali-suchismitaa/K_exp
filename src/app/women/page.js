@@ -1,13 +1,13 @@
-// pages/women/index.js
 import React from 'react';
+import Footer from '../Components/Footer';
 
-const Women = () => {
+const page = () => {
   return (
     <div className="bg-orange-400 min-h-screen w-full">
   {/* Navbar */}
   <nav className="flex items-center p-3 flex-wrap">
     <img
-      src="/logo_sf.svg"
+      src="/logo.svg"
       alt="Logo"
       width={200}
       height={600}
@@ -68,8 +68,9 @@ const Women = () => {
       ))}
     </div>
   </div>
+  <Footer/>
 </div>
   );
 };
 
-export default Women;
+export default page;

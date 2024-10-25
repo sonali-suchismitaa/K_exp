@@ -11,10 +11,10 @@ function Login() {
         <div>
           <h1 className=' text-4xl'>Log In</h1>
         </div>
-        <div>
-          <label>Username<input /></label>
+        <div className=' p-4'>
+          <label>Username<input  className=' border rounded'/></label>
           <br />
-          <label>Password<input /></label>
+          <label>Password<input type='text' className=' border rounded'/></label>
         </div>
       </main>
     </div>
