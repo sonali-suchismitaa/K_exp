@@ -20,17 +20,15 @@ export default function Page() {
             <
             /div> <
             p className = "text-2xl mb-2" >
-            Welcome < span className = "font-bold" > { session.user ? .name } < /span>. Signed
-            In As <
+            Welcome < span className = "font-bold" > { session.user ? .name } < /span>. Signed In As <
             /p> <
             p className = "font-bold mb-4" > { session.user ? .email } < /p> <
-            button className = "bg-red-600 py-2 px-6 rounded-md"
+            button className = "bg-red-600 py-2 px-6 rounded-md text-white"
             onClick = {
-                () => signOut()
-            } >
+                () => signOut() } >
             Sign out <
-            /button> < /
-            div >
+            /button> <
+            /div>
         );
     }
 
@@ -41,48 +39,41 @@ export default function Page() {
         div className = "bg-orange-500 mb-6" >
         <
         img src = "logo.svg"
-        className = "position"
+        className = "w-16 h-16"
         alt = "Logo" / >
         <
         /div> <
-        main >
+        main className = "w-full max-w-md text-center" >
         <
-        div className = "text-center mb-4 text-white" >
+        div className = "mb-4 text-white" >
         <
-        h1 className = "text-4xl" > Log In < /h1> < /
-        div > <
-        div className = "flex flex-col mb-4" >
+        h1 className = "text-4xl" > Log In < /h1> <
+        /div> <
+        div className = "flex flex-col mb-4 space-y-4" >
         <
-        label >
+        label className = "text-left text-white" >
         Username <
-        input className = "border rounded p-2" / >
+        input className = "border rounded p-2 w-full" / >
         <
-        /label>
-
-        <
-        br / >
-
-        <
-        label >
+        /label> <
+        label className = "text-left text-white" >
         Password <
         input type = "password"
-        className = "border rounded p-2" / >
+        className = "border rounded p-2 w-full" / >
         <
-        /label> < /
-        div > <
-        button className = "bg-blue-600 py-2 px-6 rounded-md mb-2"
+        /label> <
+        /div> <
+        button className = "bg-blue-600 text-white py-2 px-6 rounded-md mb-2 w-full"
         onClick = {
-            () => signIn("google")
-        } >
+            () => signIn("google") } >
         Sign in with Google <
         /button> <
-        button className = "bg-white border-gray-300 border py-2 px-6 rounded-md mb-2"
+        button className = "border-gray-300 border py-2 px-6 rounded-md mb-2 w-full text-gray-700"
         onClick = {
-            () => signIn("github")
-        } >
+            () => signIn("github") } >
         Sign in with GitHub <
-        /button> < /
-        main > <
+        /button> <
+        /main> <
         /div>
     );
 }
