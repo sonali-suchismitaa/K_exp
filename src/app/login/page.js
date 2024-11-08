@@ -63,7 +63,7 @@ export default function Page() {
           Sign in with Google
         </button>
         <button
-          className="bg-none border-gray-300 border py-2 px-6 rounded-md mb-2"
+          className="bg-black text-white border-gray-300 border py-2 px-6 rounded-md mb-2"
           onClick={() => signIn("github")}
         >
           Sign in with GitHub
