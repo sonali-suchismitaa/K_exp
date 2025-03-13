@@ -35,6 +35,22 @@ function Hero_1() {
         </ul>
       </nav>
 
+      {/* Mobile Navbar */}
+      <div className="md:hidden flex flex-col items-center space-y-3 text-white text-sm">
+        <div className="flex space-x-4">
+          <button className="hover:bg-white hover:text-black rounded px-3 py-1" onClick={() => router.push("/")}>Home</button>
+          <button className="hover:bg-white hover:text-black rounded px-3 py-1" onClick={() => router.push("/men")}>Men</button>
+          <button className="hover:bg-white hover:text-black rounded px-3 py-1" onClick={() => router.push("/women")}>Women</button>
+        </div>
+        <div className="flex space-x-4">
+          <button className="hover:bg-white hover:text-black rounded px-3 py-1" onClick={() => router.push("/contacts")}>Contact</button>
+          <button className="hover:bg-white hover:text-black rounded px-3 py-1">Cart</button>
+          <button className="border border-white rounded hover:bg-green-300 px-4 py-2" onClick={() => router.push("/login")}>
+            Login
+          </button>
+        </div>
+      </div>
+
       {/* Main Content */}
       <div className="flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-24 py-12 space-y-6 md:space-y-0 md:space-x-12 lg:space-x-[20%]">
         <div className="text-center md:text-left">
